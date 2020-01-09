@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> 상품판매	</title>
+	<link href="https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap" rel="stylesheet">
+	<style>
+	.picture {
+		background-image: url(' https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSneFM9TV4z7_EYGnDX5ShHk9lTLEPVPyHJWlf1dUSFrOsxlysk&s');
+		width: 300px;
+		height: 200px;
+		background-size: cover;
+		background-position: center;
+		margin: 50px auto 20px auto;
+
+	}
+	.explain{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+	}
+
+	.wrap {
+		width: 300px;
+		margin: 20px auto 0 auto;
+		font-family: 'Do Hyeon', sans-serif;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.box { 
+		width: 300px; 
+	}
+	.small-font{
+		font-size: 10px;
+	}
+	</style>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    		
+    	<!-- JS -->		
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<div class="wrap">
+
+		<div class="picture">
+		</div>
+
+		<div class="explain">
+			<h1> 옷을 팝니다 
+			 <span style="font-size:12px"> 가격: 150,000원/한 벌</span>
+			</h1>
+			<P> <span style="font-size: 12px"> 이 옷은 올 여름 인기 상품입니다. 마지막 세일 기간이오니 놓치지 말고 구매하세요 :)</span>
+			</P>
+		</div>
+
+		<div class="box small-font">
+			<div class="input-group input-group-sm mb-3">
+		  		<div class="input-group-prepend">
+		    	<span class="input-group-text" id="inputGroup-sizing-sm">주문자 이름</span>
+		 		 </div>
+	 		 <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+			</div>
+
+			<div class="input-group mb-3">
+			  	<div class="input-group-prepend">
+			    <label class="input-group-text" for="inputGroupSelect01">수량</label>
+			  	</div>
+			  	<select class="custom-select" id="inputGroupSelect01">
+			    <option selected>수량을 선택하세요</option>
+			    <option value="1">1</option>
+			    <option value="2">2</option>
+			    <option value="3">3</option>
+			  	</select>
+			</div>
+
+			<div class="input-group input-group-sm mb-3">
+			  	<div class="input-group-prepend">
+			    <span class="input-group-text" id="inputGroup-sizing-sm">주소</span>
+			 	 </div>
+	 		<input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+			</div>
+
+			<div class="input-group input-group-sm mb-3">
+			  	<div class="input-group-prepend">
+			    <span class="input-group-text" id="inputGroup-sizing-sm">전화번호</span>
+			 	 </div>
+	 		<input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+			</div>
+		</div>
+		<button type="button" class="btn btn-danger">주문하기</button>
+
+	</div>
+
+
+</body>
+</html>
