@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> 상품판매	</title>
+        
+	<link href="https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap" rel="stylesheet">
+	
+	<style>
+	.picture {
+		background-image: url(' https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSneFM9TV4z7_EYGnDX5ShHk9lTLEPVPyHJWlf1dUSFrOsxlysk&s');
+		width: 300px;
+		height: 200px;
+		background-size: cover;
+		background-position: center;
+		margin: 50px auto 20px auto;
+
+	}
+	.explain{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+	}
+
+	.wrap {
+		width: 400px;
+		margin: 20px auto 0 auto;
+		font-family: 'Do Hyeon', sans-serif;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.box { 
+		width: 300px; 
+	}
+	.small-font{
+		font-size: 10px;
+	}
+
+	.table{
+		margin: 20px auto 0 auto;
+	}
+
+	</style>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    		
+    	<!-- JS -->		
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+        <script>
+        	function q1() {
+        			if ($('#box1').val() == "" || $('#inputGroupSelect01').val() == "" || $('#box3').val() == "" || $('#box4').val() == ""){
+        		 		alert('빈칸이 있습니다');
+        				} else {
+        				alert('왜 안될까?');
+        				}
+        			}
+
+               /* function q1() {
+        		var box1 = $('#box1').val()
+        		var box2 = $('#inputGroupSelect01').val()
+        		var box3 = $('#box3').val()
+        		var box4 = $('#box4').val()
+
+        			if (box1 == "" || box2 == "" || box3 == "" || box4 == ""){
+        		 		alert('빈칸이 있습니다');
+        				} else {
+        				alert('왜 안될까?');
+        				}
+        			}
+
+		       /* if (box1 == ""){
+		        		 	alert("이름을 입력해주세요")
+		        		 	$('#box1').focus();
+		        		} else {
+		        		  	$('#ordertable > tbody:last').append('<tr><td>'+ boxx1 + '</td></tr>');
+		        	}
+		        	=========================
+		        	$('#box1').append('<tr><td>' + box1 + '</td><td>'+ box2 + '</td><td>' + box3 + '</td><td>' + box4 + '</td></tr>')
+
+
+        	
+        </script>
+
+</head>
+
+<body>
+	<div class="wrap">
+
+		<div class="picture">
+		</div>
+
+		<div class="explain">
+			<h1> 옷을 팝니다 
+			 <span style="font-size:12px"> 가격: 150,000원/한 벌</span>
+			</h1>
+			<P> <span style="font-size: 12px"> 이 옷은 올 여름 인기 상품입니다. 마지막 세일 기간이오니 놓치지 말고 구매하세요 :)</span>
+			</P>
+		</div>
+
+		<div class="box small-font">
+			<div class="input-group input-group-sm mb-3">
+		  		<div class="input-group-prepend">
+		    	<span class="input-group-text" 
+		    	id="inputGroup-sizing-sm">주문자 이름</span>
+		 		</div>
+	 		 	<input type="text" class="form-control" aria-label="Small" id="box1" aria-describedby="inputGroup-sizing-sm">
+			</div>
+
+			<div class="input-group mb-3">
+			  	<div class="input-group-prepend">
+			    <label class="input-group-text" for="inputGroupSelect01">수량</label>
+			  	</div>
+			  	<select class="custom-select" 
+			  	id="inputGroupSelect01">
+			    <option selected>수량을 선택하세요</option>
+			    <option value="1">1</option>
+			    <option value="2">2</option>
+			    <option value="3">3</option>
+			  	</select>
+			</div>
+
+			<div class="input-group input-group-sm mb-3">
+			  	<div class="input-group-prepend">
+			    <span class="input-group-text" 
+			    id="inputGroup-sizing-sm">주소</span>
+			 	 </div>
+	 			<input type="text" class="form-control" aria-label="Small" id="box3" aria-describedby="inputGroup-sizing-sm">
+			</div>
+
+			<div class="input-group input-group-sm mb-3">
+			  	<div class="input-group-prepend">
+			    <span class="input-group-text" 
+			    id="inputGroup-sizing-sm">전화번호</span>
+			 	 </div>
+	 			<input type="text" class="form-control" aria-label="Small" id="box4" aria-describedby="inputGroup-sizing-sm">
+			</div>
+		</div>
+		
+		<button type="button" class="btn btn-danger" onclick="q1()">주문하기</button>
+		
+		<div class="table">
+			<table class="table table-hover">
+			  <thead>
+			    <tr>
+			      <th scope="col">이름</th>
+			      <th scope="col">수량</th>
+			      <th scope="col">주소</th>
+			      <th scope="col">전화번호</th>
+			    </tr>
+			  </thead>
+
+			  <tbody>
+			    <tr>
+			      <th scope="row">유수영</th>
+			      <td>1개</td>
+			      <td>서울시</td>
+			      <td>010-1234-5678</td>
+			    </tr>
+			  </tbody>
+			</table>
+		</div>
+
+	</div>
+
+
+</body>
+</html>
