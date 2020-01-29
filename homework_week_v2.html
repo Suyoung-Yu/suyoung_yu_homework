@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> 상품판매	</title>
+	<title> 나홀로쇼핑몰	</title>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
      
@@ -60,42 +60,50 @@
 
         <script type="text/javascript">
 
+        	function isCellPhone(p) {
+        	var regExp = /^(01[016789]{1}|02|0[3-9]{1}[0-9]{1})[-][0-9]{3,4}[-][0-9]{4}$/;
+       		 return regExp.test(p);
+      		}
+
         	function q1(){
         		let name = $('#box1').val();
-        	 	let count = $('#inputGroupSelect01').val()
+        	 	let count = $('#inputGroupSelect01').val();
         	 	let address = $('#box3').val();
         	 	let phone = $('#box4').val();
 
-        	 	let temp_html = '<tr>/<td>'+ name + '</td><td>' + count + '</td><td>' + address + '</td><td>' + phone + '</td></tr>';
-        	 	if(name == "" || count == "" || address == "" || phone == ""){
-        		 	alert("빈칸이 있습니다");
-        			} else {
-        			$('#orderbox').append(temp_html);
-        			}
+        	 	if(name == ''){
+        		 	alert("이름을 입력해주세요")
+        		 	$('#box1').focus()
+        		 	return
+        		 } else if(count == ''){
+        		 	alert("수량을 입력해주세요")
+        		 	$('#inputGroupSelect01').focus()
+        		 	return
+        		 } else if(address == ''){
+        		 	alert("주소를 입력해주세요")
+        		 	$('#box3').focus()
+        		 	return
+        		 } else if(phone == ''){
+        		 	alert("휴대폰번호를 입력해주세요")
+        		 	$('#box4').focus()
+        		 	return
+        		 } 
+        		 
+        		make_card(name,count,address,phone)
         	}
-		
-        	 	/*if(name == ""){
-        		 	alert("빈칸이 있습니다");
-        		 	$('#box1').focus();
-        		    }
-        		  	  else if(count == ""){ 
-        		 	  alert("빈칸이 있습니다");
-        		 	  $('#inputGroupSelect01').focus();
-        		 	  }
-	        		 	else if else(address == ""){
-	        		 	alert("빈칸이 있습니다");
-	        		 	$('#box3').focus();
-	        		 	}
-	        		 		else if else if(phone == ""){
-	        		 		alert("빈칸이 있습니다");
-	        		 		$('#box4').focus();
-	        		 		}
-        		    else{
+
+        	function make_card(name,count,address,phone){
+        			let temp_html = '<tr>\
+        			      <td>'+name+'</td>\
+        			      <td>'+count+'</td>\
+        			      <td>'+address+ '</td>\
+        			      <td>'+phone+'</td>\
+        			      </tr>';
         			$('#orderbox').append(temp_html);
-        			}
         	}
         </script>
 
+ 
 </head>
 
 <body>
@@ -172,7 +180,6 @@
 			      <td>010-1234-5678</td>
 			    </tr>
 			  </tbody>
-
 			</table>
 		</div>
 

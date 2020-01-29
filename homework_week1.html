@@ -35,7 +35,40 @@
 	.small-font{
 		font-size: 10px;
 	}
+
+	.table{
+		margin: 20px auto 0 auto;
+	}
+
 	</style>
+	
+	<script type="text/javascript">
+		function ql(){
+		$('#orderlist').html('');
+		$.ajax({
+			type: "GET",
+			url: "http://spartacodingclub.shop/order ",
+			data: {},
+			success: function(response){
+				let rows = response['orders'];
+				for (let i = 0; i < rows.length; i++) {
+					let order_name = rows[i]['name'];
+					let order_count = rows[i]['count'];
+					let order_address = rows[i]['address'];
+					let order_number = rows[i]['phone'];
+					let temp_html = '<tr>\
+						<td>'+order_name+'</td>\
+						<td>'+order_count+'</td>\
+						<td>'+order_address+'</td>\
+						<td>'+order_number+'</td>\
+						</tr>';
+					$('#orderlist').append(temp_html);
+				}
+			}
+		  })
+		}
+
+	</script>
 
         <!-- Required meta tags -->
         <meta charset="utf-8">
@@ -98,7 +131,29 @@
 	 		<input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
 			</div>
 		</div>
-		<button type="button" class="btn btn-danger">주문하기</button>
+		<button type="button" class="btn btn-danger" onclick="ql()">주문하기</button>
+
+		<div class="table">
+			 <table class="table table-hover">
+			 	<thead>
+			 		<tr>
+			 			<th scope="col">이름</th>
+			 			<th scope="col">수량</th>
+			 			<th scope="col">주소</th>
+			 			<th scope="col">전화번호</th>
+			 		</tr>
+			 	</thead>
+			 	<tbody id="orderlist">
+			 		<tr>
+			 			<th> 유수영 </th>
+			 			<th> 5 </th>
+			 			<th> 서울시 </th>
+			 			<th> 010-1234-5678 </th>
+			 		</tr>
+			 	</tbody>
+
+			 </table>
+		</div>
 
 	</div>
 
